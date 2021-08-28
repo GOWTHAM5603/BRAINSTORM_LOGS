@@ -1,0 +1,147 @@
+﻿<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color:#ebfffa;">
+  <div class="ac">
+    <section id="title">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+        <a class="navbar-brand" href="#"> Brainstorm</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"><font color=""><strong>HOME</strong></font></a>
+            </li>
+
+         <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <font color=""><strong>
+          DEPARTMENT </strong></font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="BMEHOMEPAGE.html">BIO-MEDICAL ENGINEERING</a>
+          <a class="dropdown-item" href="CSEHOMEPAGE.html">COMPUTER SCIENCE ENGINEERING</a>
+          <a class="dropdown-item" href="ITHOMEPAGE.html">INFORMATION TECHNOLOGY</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">OTHER DEPARTMENTS</a>
+        </div>
+      </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="DETAILS.HTML"><font color=""><strong>DETAILS</strong></font></a>
+            </li>
+          </ul>
+        </div>
+                 </nav>
+<br>
+<nav class="navbar navbar-expand-sm bg-info navbar-dark justify-content-center">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="ITHOMEPAGE.html"><font color=""><strong>DEPT HOME </strong></font></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="itnoteindex.html"><font color=""><strong>NOTES</strong></font></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="itvideoindex.html"><font color=""><strong>VIDEOS</strong></font></a>
+    </li>
+   <li class="nav-item">
+      <a class="nav-link" href="gpa.html"><font color=""><strong>GPA</strong></font></a>
+    </li>
+  </ul>
+</nav>
+<br>
+
+
+
+
+
+
+
+
+<div class="container mt-3">
+  <h2><center>Search <strong><u>video</u></strong> using Subject code</h2>   
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>SUB CODE</th>
+         <th> SUB NAME </th>
+        <th>UNIT</th>
+        <th>TOPIC</th>
+        <th> LINK </th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>HS8251</td>
+         <td>ENGLISH </td>
+        <td>FULL</td>
+        <td>FULL </td>
+       <td> <a href="https://youtube.com/playlist?list=PLLGafwuKv3mVQgAhoO6qTYHiedQ_1E7L3"> Click here </a> </td>
+      </tr>
+      <tr>
+        <td>MA8251</td> <td>MATH-2</td>
+        <td>FULL</td>
+        <td>FULL 1</td>
+        <td><a href="https://youtube.com/playlist?list=PLw5GKuCOtcBkRdpM6ZWO1tkFqJ7EX1lCo">Click here </a></td>
+      </tr>
+      <tr>
+        <td>PH8252</td>
+        <td>PHY-INFO-SCI</td><td>UNIT 1</td>
+        <td>FULL TOPIC (UNIT 1)</td>
+        <td><a href="https://youtube.com/playlist?list=PLX6oOgetGjcVCcz_UNhK0NpAIMxKMh7ZA">Click here </a></td>
+      </tr>      
+          <tr>
+        <td>BE8255</td> <td>BEEME</td>
+        <td>UNIT 1</td>
+        <td>FULL TOPIC (UNIT 1)</td>
+        <td><a href="https://youtube.com/playlist?list=PLXDmSx__5bYZxCAfO2tU6HCSnP1utfJDE">Click here </a></td>
+      </tr>
+<tr>
+        <td>IT8201</td> <td>INFORMATION TECHNOLOGY ESSENTIALS</td>
+        <td>FULL</td>
+        <td>FULL</td>
+        <td><a href="https://www.youtube.com/playlist?list=PLsVsxPPe-7i9eNGp1y2PIQpAvfPa6isaN">Click here </a></td>
+      </tr>
+<tr>
+        <td>CS8251</td> <td>C PRGM</td>
+        <td>FULL</td>
+        <td>FULL</td>
+        <td><a href="https://youtube.com/playlist?list=PL97WaaQsVYyVwmCGodndg2XlIlkvNB7O_">Click here </a></td>
+      </tr>
+
+    </tbody>
+  </table>
+  
+
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+
+
+
+
+</body>
+</html>
